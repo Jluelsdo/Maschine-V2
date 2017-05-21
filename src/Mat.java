@@ -75,13 +75,14 @@ public class Mat
 	Mat matMul(Mat b)
 		{
 			Mat resultat = new Mat();
-			int m2, n2;
-			double help[][];
+			
+			int m2=0, n2=0;
+			
 			if (b.a.length == a[0].length)
 				{ // Prüfung ob Matrizen multiplizierbar
 					n2 = a.length;
 					m2 = b.a[0].length;
-					help = new double[n2][m2]; //Hilfsarray entprechend der Zeilen und Spalten erstellen
+					resultat.a = new double[n2][m2]; //Hilfsarray entprechend der Zeilen und Spalten erstellen
 
 					for (int i = 0; i < n2; i++) //Zeilen
 						{
@@ -90,15 +91,17 @@ public class Mat
 
 									for (int k = 0; k < b.a.length; k++) // Multiplikation
 										{
-											help[j][j] += a[i][k] * b.a[k][j];
+											resultat.a[i][j] += a[i][k] * b.a[k][j];
 										}
 								}
 						}
-					resultat.a = help;
+					
 				} else
 				{
 					resultat.crt = -3;
 				} // wenn Matrizen nicht multiplizierbar CRT = -3
+			resultat.n = n2;
+			resultat.m = m2;
 			return resultat;
 		}
 
