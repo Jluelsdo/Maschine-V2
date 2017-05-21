@@ -1,0 +1,16 @@
+876;800.0;Fluxkompensator;Pausenraum
+456;300.0;CNC;Halle1
+567;900.0;Drehbank;Schloﬂerei
+999;1000.0;Schweiﬂger‰t;Schloﬂerei
+876;700.0;Fluxkompensator;Labor
+2984;1200.0;Roboter;Lackiererei
+454567;1600.0;Drehbank;Schloﬂerei
+9;1300.0;Schweiﬂger‰t;Schloﬂerei
+5676;100.0;Drehbank;Schloﬂerei
+989;400.0;Schweiﬂger‰t;Schloﬂerei
+23;200.0;Presse;Halle1
+376;600.0;Lˆtstation;Labor
+242424;1100.0;Roboter;Lackiererei
+254;500.0;Roboter;Lackiererei
+205;1500.0;Roboter;Lackiererei
+204;1400.0;Roboter;Lackiererei

@@ -1,0 +1,5 @@
+1;9.0;Presse;Halle1
+2;3.0;CNC;Halle1
+3;7.0;Drehbank;Schloﬂerei
+4;2.0;Schweiﬂger‰t;Schloﬂerei
+5;8.0;Fluxkompensator;Labor
