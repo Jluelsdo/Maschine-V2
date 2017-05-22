@@ -1,6 +1,6 @@
 import java.io.BufferedReader;
 import java.io.IOException;
-
+import java.util.Iterator;
 import java.util.TreeSet;
 
 public class MASet
@@ -37,4 +37,22 @@ public class MASet
 			return anzahl;
 		}
 
+	String[] set2Stringf(int a)
+		{
+			String[] csvStrings = new String[tmenge.size()];
+			switch (a)
+				{
+				case 1:
+					Iterator<MaschineS> iti = tmenge.iterator();
+					int i = 0;
+					csvStrings[0] = tmenge.first().ausMaschCSV();
+					while (iti.hasNext())
+						{
+							csvStrings[i] = (iti.next().ausMaschCSV());
+							i++;
+						}
+					break;
+				}
+			return csvStrings;
+		}
 }
