@@ -40,6 +40,12 @@ public class MatAnw
 				} else
 				System.out.println("Schlecht");
 			Mat mat6 = new Mat(br6);
+			if (mat6.matAus(fw6))
+				{
+					System.out.println("GUT");
+				} else
+				System.out.println("Schlecht");
+
 			Mat mat3_3 = new Mat(br2);
 			if (mat3_3.matAus(fw2))
 				{

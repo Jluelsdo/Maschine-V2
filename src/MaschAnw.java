@@ -45,23 +45,21 @@ public class MaschAnw
 			System.out.println(
 					"Maschinen Instanzen für die CSV Strings aus maschGeber().\nPrüfung und entsprechende Ausgabe\n\n\n");
 			String[] csvF = maschGeber(); // CSV Strings aus maschGeber in ein Array laden
-			//Maschine[] maschinenArray = new Maschine[8]; // Maschinen Array für Instanzen durch CSV Array
 			List<Maschine> maschinenListe = new LinkedList<Maschine>(); // Liste für korrekte Maschinen Instanzen
 			for (int i = 0; i < csvF.length; i++)
 				{
-					//maschinenArray[i] = new Maschine(csvF[i]);
 					if (new Maschine(csvF[i]).getCrt() == 1) // korrekte Maschinen Instanz in Maschinenliste speichern
 						{
 							maschinenListe.add(new Maschine (csvF[i]));
 							System.out.println("\nMaschine erfolgreich eingetragen:\n");
-							//maschinenArray[i].ausMasch();
+							
 							new Maschine (csvF[i]).ausMasch();
 							System.out.println("\n");
 						} else
 						{
 							System.out.println("\nDie " + (i + 1)
 									+ ". Maschinen Instanz enthielt fehlerhafte Werte.\nFehlerhafte Instanz:\n");
-							new Maschine (csvF[i]).ausMasch();//maschinenArray[i].ausMasch(); // Referenz I Maschine Ausgabe wird null
+							new Maschine (csvF[i]).ausMasch();
 						}
 				}
 
