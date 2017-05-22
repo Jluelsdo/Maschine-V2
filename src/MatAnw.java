@@ -10,10 +10,12 @@ public class MatAnw
 	public static void main(String[] args) throws IOException
 		{
 			// File/Buffered -reader, Filewriter
-			// FileReader fr1 = new FileReader("mat_.txt");
+			FileReader fr1 = new FileReader("MatrixCSV1.txt");
 			FileWriter fw1 = new FileWriter("test_.txt");
-			// BufferedReader br1 = new BufferedReader(fr1);
-
+			BufferedReader br1 = new BufferedReader(fr1);
+			FileReader fr6 = new FileReader("MatrixCSV2.txt");
+			FileWriter fw6 = new FileWriter("test_.txt");
+			BufferedReader br6 = new BufferedReader(fr6);
 			FileReader fr2 = new FileReader("mat3_3.txt");
 			FileWriter fw2 = new FileWriter("test3_3.txt");
 			BufferedReader br2 = new BufferedReader(fr2);
@@ -31,13 +33,13 @@ public class MatAnw
 			BufferedReader br5 = new BufferedReader(fr5);
 
 			// Matrizen
-			Mat mat_ = new Mat();
+			Mat mat_ = new Mat(br1);
 			if (mat_.matAus(fw1))
 				{
 					System.out.println("GUT");
 				} else
 				System.out.println("Schlecht");
-
+			Mat mat6 = new Mat(br6);
 			Mat mat3_3 = new Mat(br2);
 			if (mat3_3.matAus(fw2))
 				{
@@ -75,7 +77,7 @@ public class MatAnw
 					// Main Menü
 					System.out.println();
 					System.out.println("Bitte waehlen:");
-					System.out.println("(1) mat_ * mat3_3");
+					System.out.println("(1) matcsv_ * matcsv");
 					System.out.println("(2) mat3_3 * mat3_2");
 					System.out.println("(3) mat5_6 * mat_6_7");
 					System.out.println("(4) mat5_6 * mat3_3");
@@ -90,10 +92,10 @@ public class MatAnw
 						{
 
 						case 1:
-							if (mat_.matMul(mat3_3).crt != -3)
+							if (mat_.matMul(mat6).crt != -3)
 								{
 
-									resMatMul = mat_.matMul(mat3_3);
+									resMatMul = mat_.matMul(mat6);
 									if (resMatMul.matAus(fwR))
 										{
 											System.out.println("GUT");

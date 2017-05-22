@@ -1,20 +1,21 @@
 
-public class Maschine
+public class MaschineS implements Comparable
 {
+
 	private int manr;
 	private int crt = 1;
 	private double preis;
 	private String mabez, stao;
 
-	Maschine()
+	MaschineS()
 	{
-		
+
 	}
 
-	Maschine(String csvString)
+	MaschineS(String csvString)
 	{
 		String[] s = csvString.split(";");
-		
+
 		boolean[] korrekt = new boolean[4];
 
 		korrekt[0] = setManr(Integer.parseInt(s[0]));
@@ -128,5 +129,12 @@ public class Maschine
 		{
 			return (preis / laufz);
 
+		}
+
+	@Override
+	public int compareTo(Object arg0)
+		{
+			// TODO Auto-generated method stub
+			return 0;
 		}
 }
