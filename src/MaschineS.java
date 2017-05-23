@@ -1,5 +1,5 @@
 
-public class MaschineS implements Comparable
+public class MaschineS implements Comparable<MaschineS>
 {
 
 	private int manr;
@@ -131,10 +131,11 @@ public class MaschineS implements Comparable
 
 		}
 
-	@Override
-	public int compareTo(Object arg0)
+	
+	public int compareTo(MaschineS in)
 		{
-			// TODO Auto-generated method stub
-			return 0;
+			if ((this.manr == in.manr)&&(this.mabez == in.mabez)&&(this.preis==in.preis)){
+				return 0;
+			}else return 1;
 		}
 }
